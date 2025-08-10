@@ -1,0 +1,46 @@
+
+[] Vector :
+    Vectors are sequence containers representing arrays that can chnage in size.
+    When vector is full it double itself.
+
+[] In Built Sort Function :
+
+    Bubble Sort. Selection Sort, Insertion Sort Which have 0(2^n) Complexity.
+    Quick Sort, Merge Sort, Heap Sort Which have 0(nLogn) Complexity.
+
+[] Order Complexity :
+    It is way to describe how the performance of an algorithm changes as the size of the input increases.
+    it help you to estimate.
+        Time Complexity :  How long an algorithm takes to run.
+        Space Complexity:  How much memory the algorithm uses.
+
+    | Big O Notation | Name              | Example                              |
+    | -------------- | ----------------- | ------------------------------------ |
+    | O(1)           | Constant time     | Accessing an array element           |
+    | O(log n)       | Logarithmic time  | Binary search                        |
+    | O(n)           | Linear time       | Loop through an array                |
+    | O(n log n)     | Linearithmic time | Merge sort, Quick sort (avg case)    |
+    | O(n²)          | Quadratic time    | Nested loops (e.g., bubble sort)     |
+    | O(2ⁿ)          | Exponential time  | Recursive Fibonacci                  |
+    | O(n!)          | Factorial time    | Brute-force permutations (e.g., TSP) |
+
+[] Experimental Analysis :
+    Write the prpgram and analysis time to execute program is called Experimental Analysis.
+
+[] Theoretical Analysis
+
+[] Big O Notation
+
+[] Some Examples
+    ~> Loop based problems
+    ~> Recursion based problems
+    ~> Recurrence solving
+    ~> Backtracking
+    ~> Dynamic Programming
+    ~> Graph Algorithms
+
+[] Bubble Sort :
+    Worst Case : O(n^2)
+    Best Case :  O(n)
+
+[] Binery Search : O(Logn)
