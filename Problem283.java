@@ -1,6 +1,6 @@
 public class Problem283
 {
-    public static void moveZeroes(int[] nums) 
+    public static void moveZeroes(int[] nums) // moveZeroes(new int[]{0,1,0,3,12});
     {
         if(nums.length == 0 || nums.length == 1) return;
 
