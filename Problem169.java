@@ -6,32 +6,67 @@ public class Problem169
 {
     public static int majorityElement(int[] nums) 
     {
-        if(nums.length == 0) return 0;
+        // 1 - Brute Force
+        // 2 - Sorting and Counting
+        // 3 - Moore's Algorithm
+
+        // if(nums.length == 0) return 0;
         if(nums.length == 1) return nums[0];
 
-        HashMap<Integer,Integer> table = new HashMap<>();
-        int counter = 1,max=0;
+        int res = 0;
+        int count = 1;
 
-        for(int i=0; i<nums.length; i++)
+        for(int i=1; i<nums.length; i++)
         {
-            if(table.containsKey(nums[i]))
-            {
-                table.put(nums[i],table.get(nums[i])+1);
-                if(counter < table.get(nums[i]))
-                {
-                    counter++;
-                    max = nums[i];
-                }
-            }
+            if(nums[res] == nums[i])
+                count++;
             else
+                count--;
+            if(count == 0)
             {
-                table.put(nums[i],1);
+                res = i;
+                count = 1;
             }
         }
 
-        if(counter > nums.length/2) return max;
+        count = 0;
 
-        return 0;
+        for(int i=0; i<nums.length; i++)
+        {
+            if(nums[res] == nums[i])
+                count++;
+        }
+
+        if(count <= (nums.length/2))
+        {
+            return -1;
+        }
+
+        return nums[res];
+
+        // HashMap<Integer,Integer> table = new HashMap<>();
+        // int counter = 1,max=0;
+
+        // for(int i=0; i<nums.length; i++)
+        // {
+        //     if(table.containsKey(nums[i]))
+        //     {
+        //         table.put(nums[i],table.get(nums[i])+1);
+        //         if(counter < table.get(nums[i]))
+        //         {
+        //             counter++;
+        //             max = nums[i];
+        //         }
+        //     }
+        //     else
+        //     {
+        //         table.put(nums[i],1);
+        //     }
+        // }
+
+        // if(counter > nums.length/2) return max;
+
+        // return 0;
     }
 
     public static void main(String[] args) 

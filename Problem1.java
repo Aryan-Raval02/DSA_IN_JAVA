@@ -6,6 +6,29 @@ public class Problem1
 {
     public static int[] twosum(int[] nums,int target)
     {
+        // int start = 0;
+        // int end = nums.length-1;
+
+        // while(start < end)
+        // {
+        //     int pairsum = nums[start] + nums[end];
+        //     if(pairsum > target)
+        //     {
+        //         end--;
+        //     }
+        //     else if(pairsum < target)
+        //     {
+        //         start++;
+        //     }
+        //     else
+        //     {
+        //         return new int[]{start,end};
+        //     }
+        // }
+
+        // return new int[]{-1,-1};
+
+
         Map<Integer,Integer> map = new HashMap<>();
 
         for(int i=0; i<nums.length; i++)
@@ -22,7 +45,7 @@ public class Problem1
     }
     public static void main(String[] args) 
     {
-        System.out.println(Arrays.toString(twosum(new int[]{2,5,7,11,15}, 16)));
+        System.out.println(Arrays.toString(twosum(new int[]{2,5,7,11,15},7)));
         System.out.println(Arrays.toString(twosum(new int[]{3,2,4}, 6)));    
     }    
 }
