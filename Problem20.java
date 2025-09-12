@@ -19,7 +19,7 @@ public class Problem20
                 case '}' : if(stack.empty()) return false; if(stack.pop()!='{') return false; break;
                 case ']' : if(stack.empty()) return false; if(stack.pop()!='[') return false; break;
             }
-        }
+        } 
 
         return stack.empty();
 
